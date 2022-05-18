@@ -1,0 +1,167 @@
+﻿<Window x:Class="Authorization.Windows.IDRegistr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Authorization"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Приложение для пользователей" Height="1080" Width="1920"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid>
+ 
+        <Grid.RowDefinitions>
+           <RowDefinition Height="2*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="*"/> 
+           <RowDefinition Height="1.5*"/> 
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image gif:ImageBehavior.AnimatedSource="/Background\NyanCat.gif"
+               Grid.ColumnSpan="2"
+               Grid.RowSpan="10"
+               Stretch="Fill"
+               />
+
+        <TextBlock Grid.ColumnSpan="2"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="Регистрация"
+                   FontSize="70" FontWeight="Bold" Foreground="#DDFFFFFF"
+                   />
+        <TextBlock Grid.Row="1"
+                   Text="NickName"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        
+        <TextBlock Grid.Row="2"
+                   Text="Name"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <TextBlock Grid.Row="3"
+                   Text="Fname"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <TextBlock Grid.Row="4"
+                   Text="Age"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <TextBlock Grid.Row="5"
+                   Text="Phone"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <TextBlock Grid.Row="6"
+                   Text="Email"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <TextBlock Grid.Row="7"
+                   Text="Birthday"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <TextBlock Grid.Row="8"
+                   Text="Password"
+                   FontSize="70"
+                   TextAlignment="Right" FontWeight="Bold"
+                   Margin="0 0 10 0" Foreground="#DDFFFFFF"
+            />
+        <Button         Grid.Row="9"
+                        Grid.ColumnSpan="2"
+                        Content="Зарегаться"
+                        FontSize="50"
+                        HorizontalContentAlignment="Center"
+                        Height="70"
+                        Width="300"
+                        Margin="20"
+                        Background="Orange"
+                        Foreground="Black" Cursor="Hand" FontWeight="Bold"
+                    />
+        <TextBox Grid.Column="1"
+                 Grid.Row="1"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF" CaretBrush="{x:Null}"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="2"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="3"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="4"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="5"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="6"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="7"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+        <TextBox Grid.Column="1"
+                 Grid.Row="8"
+                 FontSize="50" Cursor="IBeam"
+                 Margin="15 0 0 0"
+                 Text="495894"
+                 VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#DDFFFFFF"
+            />
+    </Grid>
+</Window>

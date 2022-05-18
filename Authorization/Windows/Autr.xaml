@@ -1,0 +1,87 @@
+﻿<Window x:Class="Authorization.Windows.Autr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Authorization"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Приложение для пользователей" Height="1080" Width="1920"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid>
+        <Image gif:ImageBehavior.AnimatedSource="/Background\NyanCat.gif"
+               Stretch="Fill"/>
+
+
+        <materialDesign:Card Padding="45" Margin="16"
+                             Height="600"
+                             Width="450"
+                             Opacity="0.9"    
+                             >
+            <StackPanel>
+              
+                <TextBlock FontSize="40" VerticalAlignment="Top" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}" FontStyle="Italic" FontWeight="Bold">Авторизация</TextBlock>
+                <Button 
+                        FontSize="10"
+                        Width="40"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Margin="-30 -80" Cursor="Hand" BorderBrush="{x:Null}"
+                           
+                    >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/cross.png"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock Margin="20"
+                    Text="___________________________________________"
+                    TextAlignment="Center"
+                    />
+                <TextBlock Text="Введите ваш ID"
+                           FontSize="20"
+                           Opacity="0.5"
+                           Margin="20" FontWeight="Bold"
+                    />
+                <TextBox FontSize="30"
+                           Text="1840"
+                           
+                           Margin="20 0 10 0" FontWeight="Bold" Cursor="IBeam"
+                    />
+                
+                <TextBlock Text="Введите пароль"
+                           FontSize="20"
+                           Opacity="0.5"
+                           Margin="20" FontWeight="Bold"
+                    />
+                <PasswordBox FontSize="30"
+                           Margin="20 0 10 0" FontWeight="Bold" Cursor="IBeam"
+                    />
+                <Button Content="Войти"
+                        Height="30"
+                        Width="71"
+                        Margin="20"
+                        Background="Orange"
+                        Foreground="Black"
+                    />
+                <Button Content="Создать ID"
+                        Height="30"
+                        Width="110"
+                        Margin="20"
+                        Background="Orange"
+                        Foreground="Black"
+                    />
+            </StackPanel>
+            
+        </materialDesign:Card>
+        
+    </Grid>
+</Window>
