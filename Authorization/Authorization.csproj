@@ -138,12 +138,14 @@
   <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Sound.png" />
-    <Resource Include="Images\Play.png" />
     <Resource Include="Images\Pause.png" />
     <Resource Include="Images\x.png" />
     <Resource Include="Images\Mute.png" />
     <Resource Include="Images\Volume Down.png" />
     <Resource Include="Images\Volume Up.png" />
+    <Resource Include="Images\Rewind.png" />
+    <Resource Include="Images\Fast Fwd.png" />
+    <Resource Include="Images\Play.png" />
     <Content Include="Videos\100_0001.mov" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

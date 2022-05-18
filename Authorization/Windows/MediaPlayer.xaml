@@ -10,8 +10,6 @@
         AllowsTransparency="True"
         WindowStyle="None"
         ResizeMode="NoResize"
-        x:Name="RootWindow"
-        MaxHeight="1080" MaxWidth="1920"
         
         Loaded="Window_Loaded">
     <Border Background="Black"
@@ -34,23 +32,6 @@
                          
                       MediaOpened="mpMyl_MediaOpened"
              />
-            <Button Width="24"
-                Height="24"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Margin="50 0 0 0"
-                x:Name="Play"
-                Click="Play_Click"
-                Grid.Row="1"
-                FontSize="40" 
-                FontFamily="Rockwell Condensed" 
-                BorderBrush="{x:Null}" 
-            >
-                <Button.Background>
-                    <ImageBrush ImageSource="/Authorization;component/Images/play.png"/>
-                </Button.Background>
-            </Button>
-
             <Button Width="150"
                 Height="100"
                 HorizontalAlignment="Left"
@@ -67,23 +48,30 @@
                     <ImageBrush/>
                 </Button.Background>
             </Button>
-            <Button Width="24"
-                Height="24"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center"
-                Margin="0 0 50 0"
-                x:Name="Pause"
-                Click="Pause_Click"
+            <WrapPanel
                 Grid.Row="1"
-                Grid.Column="0"
-                FontSize="40" 
-                FontFamily="Rockwell Condensed" 
-                BorderBrush="{x:Null}"
-            >
-                <Button.Background>
-                    <ImageBrush ImageSource="/Authorization;component/Images/Pause.png"/>
-                </Button.Background>
-            </Button>
+                VerticalAlignment="Center"
+                Margin="20 0 0 0"
+                >
+                <Image x:Name="Rewind"
+                    Width="24"
+                    Height="24"
+                    MouseLeftButtonDown="Rewind_MouseLeftButtonDown"  
+                    Source="/Images\Rewind.png"
+                />
+                <Image x:Name="Play"
+                    Width="24"          
+                    Height="24"
+                    MouseLeftButtonDown="Play_MouseLeftButtonDown"  
+                    Source="/Images\Play.png"
+                />
+                <Image x:Name="FastFwd"
+                    Width="24"
+                    Height="24"
+                    MouseLeftButtonDown="FastFwd_MouseLeftButtonDown"  
+                    Source="/Images\Fast Fwd.png"
+                />
+            </WrapPanel>
             <Button
             Width="150"
             Height="100"

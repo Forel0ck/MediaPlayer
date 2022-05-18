@@ -24,9 +24,8 @@ namespace Authorization.Windows
         DispatcherTimer tiempo = new DispatcherTimer();
         DispatcherTimer timer;
         bool isDragging;
-        private String tipo_Media = "";
-        private bool fullscreen = false;
         private bool mute = false;
+        private bool isPlaying = false;
 
 
         public MediaPlayer()
@@ -53,12 +52,6 @@ namespace Authorization.Windows
             }
         }
 
-        private void Play_Click(object sender, RoutedEventArgs e)
-        {
-            MediaState ms = MediaState.Play;
-            mpMyl.LoadedBehavior = ms;
-        }
-
         private void Stop_Click(object sender, RoutedEventArgs e)
         {
             MediaState ss = MediaState.Stop;
@@ -70,12 +63,6 @@ namespace Authorization.Windows
             Environment.Exit(0);
         }
 
-        private void Pause_Click(object sender, RoutedEventArgs e)
-        {
-            MediaState ps = MediaState.Pause;
-            mpMyl.LoadedBehavior = ps;
-
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -169,33 +156,68 @@ namespace Authorization.Windows
 
         }
         public WindowState lastWindowState;
-        public void Fullpantalla()
+        public void Fullpantalla(Window win)
         {
-            if (!fullscreen)
+            
+            if (win.WindowState == WindowState.Normal)
             {
-
-                RootWindow.Visibility = Visibility.Collapsed;
-                RootWindow.WindowStyle = WindowStyle.None;
-                RootWindow.ResizeMode = ResizeMode.NoResize;
-                lastWindowState = RootWindow.WindowState;
-                RootWindow.WindowState = WindowState.Maximized;
-                RootWindow.Topmost = true;
-                RootWindow.Visibility = Visibility.Visible;
+                win.WindowState = WindowState.Maximized;
             }
             else
             {
-                RootWindow.Topmost = false;
-                RootWindow.ResizeMode = ResizeMode.CanResize;
-                RootWindow.WindowState = lastWindowState;
-                RootWindow.Visibility = Visibility.Visible;
-
+                win.WindowState = WindowState.Normal;
             }
             
         }
 
         private void Full_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Fullpantalla();
+            Fullpantalla(this);
+        }
+
+        private void Rewind_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+
+        private void Play_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Play();
+        }
+
+        private void Play()
+        {
+
+            if (!isPlaying)
+            {
+
+
+                Vol.Source = new BitmapImage(new Uri(@"/Images\Pause.png", UriKind.Relative));
+                MediaState ms = MediaState.Play;
+                mpMyl.LoadedBehavior = ms;
+
+            }
+            else
+            {
+                MediaState ms = MediaState.Pause;
+                mpMyl.LoadedBehavior = ms;
+                Vol.Source = new BitmapImage(new Uri(@"/Images\Play.png", UriKind.Relative));
+
+            }
+
+            isPlaying = !isPlaying;
+
+        }
+
+        private void FastFwd_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Go_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }  
 }
