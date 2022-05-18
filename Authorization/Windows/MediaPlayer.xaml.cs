@@ -94,7 +94,7 @@ namespace Authorization.Windows
             }
         }
 
-        string videoURL = @"C:\Users\Chebyrek\source\repos\Authorization\Authorization\Videos\100_0001.mov";
+        string videoURL = @"C:\Users\Forel\source\repos\MediaPlayer\Authorization\Videos\PulpFictionPumpkinAd.mp4";
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             try
@@ -113,9 +113,11 @@ namespace Authorization.Windows
 
         private void mpMyl_MediaOpened(object sender, RoutedEventArgs e)
         {
+            slideravance.Maximum = mpMyl.NaturalDuration.TimeSpan.TotalSeconds;
             TimeSpan ts = mpMyl.NaturalDuration.TimeSpan;
             slideravance.Maximum = ts.TotalSeconds;
             timer.Start();
+            
         }
 
         private void slideravance_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -177,7 +179,7 @@ namespace Authorization.Windows
 
         private void Rewind_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            mpMyl.Position -= TimeSpan.FromSeconds(10);
         }
 
         private void DoPlay()
@@ -187,7 +189,7 @@ namespace Authorization.Windows
             {
 
 
-                Vol.Source = new BitmapImage(new Uri(@"/Images\Pause.png", UriKind.Relative));
+                Go.Source = new BitmapImage(new Uri(@"/Images\Pause.png", UriKind.Relative));
                 MediaState ms = MediaState.Play;
                 mpMyl.LoadedBehavior = ms;
 
@@ -196,7 +198,7 @@ namespace Authorization.Windows
             {
                 MediaState ms = MediaState.Pause;
                 mpMyl.LoadedBehavior = ms;
-                Vol.Source = new BitmapImage(new Uri(@"/Images\Play.png", UriKind.Relative));
+                Go.Source = new BitmapImage(new Uri(@"/Images\Play.png", UriKind.Relative));
 
             }
 
@@ -206,7 +208,7 @@ namespace Authorization.Windows
 
         private void FastFwd_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            mpMyl.Position += TimeSpan.FromSeconds(10);
         }
 
         private void Go_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

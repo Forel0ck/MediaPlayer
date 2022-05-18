@@ -50,10 +50,12 @@
                 Grid.Row="1"
                 VerticalAlignment="Center"
                 Margin="20 0 0 0"
+                HorizontalAlignment="Center"
                 >
                 <Image x:Name="Rewind"
                     Width="24"
                     Height="24"
+                    Margin="10 0 10 0"
                     MouseLeftButtonDown="Rewind_MouseLeftButtonDown"  
                     Source="/Images\Rewind.png"
                 />
@@ -66,13 +68,14 @@
                 <Image x:Name="FastFwd"
                     Width="24"
                     Height="24"
+                    Margin="10 0 10 0"
                     MouseLeftButtonDown="FastFwd_MouseLeftButtonDown"  
                     Source="/Images\Fast Fwd.png"
                 />
             </WrapPanel>
 
             <Button
-            Width="150"
+            Width="170"
             Height="100"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
@@ -141,7 +144,7 @@
                     Height="24"
                     Margin="10" 
                     MouseLeftButtonDown="Full_MouseLeftButtonDown"  
-                    Source="/Images\cross.png"
+                    Source="/Images\FullScreen.png"
                 />
 
             </WrapPanel>
