@@ -42,12 +42,10 @@
                 Click="Exit_Click"
                 FontSize="40" 
                 FontFamily="Rockwell Condensed" 
-                BorderBrush="{x:Null}"                   
-            >
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background>
-            </Button>
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                Background="{x:Null}"                   
+            />
             <WrapPanel
                 Grid.Row="1"
                 VerticalAlignment="Center"
@@ -59,10 +57,10 @@
                     MouseLeftButtonDown="Rewind_MouseLeftButtonDown"  
                     Source="/Images\Rewind.png"
                 />
-                <Image x:Name="Play"
-                    Width="24"          
+                <Image x:Name="Go"
+                    Width="24"
                     Height="24"
-                    MouseLeftButtonDown="Play_MouseLeftButtonDown"  
+                    MouseLeftButtonDown="Go_MouseLeftButtonDown"  
                     Source="/Images\Play.png"
                 />
                 <Image x:Name="FastFwd"
@@ -72,6 +70,7 @@
                     Source="/Images\Fast Fwd.png"
                 />
             </WrapPanel>
+
             <Button
             Width="150"
             Height="100"
@@ -85,6 +84,7 @@
             FontFamily="Rockwell Condensed" 
             Background="{x:Null}" 
             BorderBrush="{x:Null}"
+            Foreground="White"
             />
 
             <Slider Grid.Row="1"
@@ -145,7 +145,7 @@
                 />
 
             </WrapPanel>
-           
+
         </Grid>
     </Border>
 </Window>

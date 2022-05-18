@@ -180,13 +180,7 @@ namespace Authorization.Windows
 
         }
 
-
-        private void Play_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Play();
-        }
-
-        private void Play()
+        private void DoPlay()
         {
 
             if (!isPlaying)
@@ -217,7 +211,7 @@ namespace Authorization.Windows
 
         private void Go_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            DoPlay();
         }
     }  
 }
